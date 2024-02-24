@@ -58,7 +58,8 @@ To get started with the InowConfigManager
     Invoke-Gitcommit -Message "New changes"
     Invoke-Gitpush
 ```
-
+### Schedule
+Schedule the above snippet as per your requirement to maintain the history of all configuration changes in your tenat.
 ## Contributing 
 
 
