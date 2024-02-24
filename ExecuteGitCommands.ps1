@@ -22,45 +22,25 @@ git repository path
 No return
 #>
 
-function Invoke-GitPull{
-
-	[CmdletBinding()]
-	Param(
-		[string] $Location
-	)	
-	Set-Location $Location
+function Invoke-GitPull{	
 	& "$PSScriptRoot\commandLine\git-action.bat" pull 	
 }
 
 function Invoke-GitPush{
-
-	[CmdletBinding()]
-	Param(
-		[string] $Location
-	)	
-	Set-Location $Location
 	& "$PSScriptRoot\commandLine\git-action.bat" push
 }
 
 function Invoke-GitCommit{
-
-	[CmdletBinding()]
-	Param(
-		[string] $Location,
-		[string] $Message
-	)	
-	Set-Location $Location
-	& "$PSScriptRoot\commandLine\git-action.bat" commit $Message
+	& "$PSScriptRoot\commandLine\git-action.bat" $Message
 }
 
 function Invoke-GitAdd{
 
 	[CmdletBinding()]
-	Param(
-		[string] $Location,
+	Param(		
 		[string] $Path
 	)	
-	Set-Location $Location
+	
 	& "$PSScriptRoot\commandLine\git-action.bat" Add $path
 }
 
